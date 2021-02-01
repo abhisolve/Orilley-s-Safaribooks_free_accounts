@@ -1,0 +1,50 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signin.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex"
+            style="background-image: url({% static 'img/login-signup.png' %}); background-size: cover; background-position: center center">
+        </div>
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light space-from-above">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">Signin</h3>
+                            <form method="post" action="">
+                                {% csrf_token %}
+                                <div class="form-group mb-3">
+                                    <input name="email" id="inputEmail" type="email" placeholder="Email address" required=""
+                                        autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input id="inputPassword" type="password" placeholder="Password" name="password" required=""
+                                        class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign
+                                    in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
+{% endblock %}

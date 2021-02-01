@@ -1,0 +1,18 @@
+{% extends 'dashboard/base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <table class="table table-bordered" id="safari-account-table"></table>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}

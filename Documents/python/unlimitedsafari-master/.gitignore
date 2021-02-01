@@ -1,0 +1,8 @@
+*.*.*
+*.pyc
+__pycache__
+.vscode
+*.log
+*.logs
+scraper/dbs/
+geckodriver.log
